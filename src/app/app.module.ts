@@ -7,12 +7,12 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 // #region default language
 // 参考：https://ng-alain.com/docs/i18n
-import { default as ngLang } from '@angular/common/locales/zh';
-import { DELON_LOCALE, zh_CN as delonLang } from '@delon/theme';
-import { zhCN as dateLang } from 'date-fns/locale';
-import { NZ_DATE_LOCALE, NZ_I18N, zh_CN as zorroLang } from 'ng-zorro-antd/i18n';
+import { default as ngLang } from '@angular/common/locales/en';
+import { DELON_LOCALE, en_US as delonLang } from '@delon/theme';
+import { enUS as dateLang } from 'date-fns/locale';
+import { NZ_DATE_LOCALE, NZ_I18N, en_US as zorroLang } from 'ng-zorro-antd/i18n';
 const LANG = {
-  abbr: 'zh',
+  abbr: 'en',
   ng: ngLang,
   zorro: zorroLang,
   date: dateLang,

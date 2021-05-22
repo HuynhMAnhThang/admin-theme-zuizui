@@ -17,22 +17,22 @@ const routes: Routes = [
       {
         path: 'login',
         component: UserLoginComponent,
-        data: { title: '登录', titleI18n: 'app.login.login' },
+        data: { title: 'Đăng nhâp', titleI18n: 'app.login.login' },
       },
       {
         path: 'register',
         component: UserRegisterComponent,
-        data: { title: '注册', titleI18n: 'app.register.register' },
+        data: { title: 'Đăng ký', titleI18n: 'app.register.register' },
       },
       {
         path: 'register-result',
         component: UserRegisterResultComponent,
-        data: { title: '注册结果', titleI18n: 'app.register.register' },
+        data: { title: 'Đăng ký - kết quả', titleI18n: 'app.register.register' },
       },
       {
         path: 'lock',
         component: UserLockComponent,
-        data: { title: '锁屏', titleI18n: 'app.lock' },
+        data: { title: 'Khóa', titleI18n: 'app.lock' },
       },
     ],
   },

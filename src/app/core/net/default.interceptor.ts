@@ -18,21 +18,21 @@ import { BehaviorSubject, Observable, of, throwError } from 'rxjs';
 import { catchError, filter, mergeMap, switchMap, take } from 'rxjs/operators';
 
 const CODEMESSAGE: { [key: number]: string } = {
-  200: '服务器成功返回请求的数据。',
-  201: '新建或修改数据成功。',
-  202: '一个请求已经进入后台排队（异步任务）。',
-  204: '删除数据成功。',
-  400: '发出的请求有错误，服务器没有进行新建或修改数据的操作。',
-  401: '用户没有权限（令牌、用户名、密码错误）。',
-  403: '用户得到授权，但是访问是被禁止的。',
-  404: '发出的请求针对的是不存在的记录，服务器没有进行操作。',
-  406: '请求的格式不可得。',
-  410: '请求的资源被永久删除，且不会再得到的。',
-  422: '当创建一个对象时，发生一个验证错误。',
-  500: '服务器发生错误，请检查服务器。',
-  502: '网关错误。',
-  503: '服务不可用，服务器暂时过载或维护。',
-  504: '网关超时。',
+  200: 'Máy chủ đã trả về thành công dữ liệu được yêu cầu. ',
+  201: 'Tạo hoặc sửa đổi dữ liệu thành công. ',
+  202: 'Một yêu cầu đã vào hàng đợi nền (tác vụ không đồng bộ). ',
+  204: 'Xóa dữ liệu thành công. ',
+  400: 'Đã xảy ra lỗi trong yêu cầu được gửi và máy chủ không tạo hoặc sửa đổi dữ liệu. ',
+  401: 'Người dùng không có quyền (mã thông báo, tên người dùng, mật khẩu sai). ',
+  403: 'Người dùng được ủy quyền, nhưng quyền truy cập bị cấm. ',
+  404: 'Yêu cầu dành cho bản ghi không tồn tại và máy chủ không hoạt động. ',
+  406: 'Định dạng được yêu cầu không có sẵn. ',
+  410: 'Tài nguyên được yêu cầu đã bị xóa vĩnh viễn và sẽ không còn nữa. ',
+  422: 'Khi tạo một đối tượng, một lỗi xác thực đã xảy ra. ',
+  500: 'Đã xảy ra lỗi trong máy chủ, vui lòng kiểm tra máy chủ. ',
+  502: 'Lỗi cổng. ',
+  503: 'Dịch vụ không khả dụng, máy chủ tạm thời quá tải hoặc được bảo trì. ',
+  504: 'Cổng vào đã hết thời gian chờ. ',
 };
 
 /**
@@ -92,7 +92,7 @@ export class DefaultInterceptor implements HttpInterceptor {
       this.toLogin();
       return throwError(ev);
     }
-    // 2、如果 `refreshToking` 为 `true` 表示已经在请求刷新 Token 中，后续所有请求转入等待状态，直至结果返回后再重新发起请求
+    // 2. Nếu `refreshToking` là` true`, có nghĩa là nó đã được yêu cầu làm mới Token và tất cả các yêu cầu tiếp theo sẽ chuyển sang trạng thái chờ và yêu cầu sẽ được thực hiện lại sau khi kết quả được trả về
     if (this.refreshToking) {
       return this.refreshToken$.pipe(
         filter((v) => !!v),
@@ -211,7 +211,7 @@ export class DefaultInterceptor implements HttpInterceptor {
       default:
         if (ev instanceof HttpErrorResponse) {
           console.warn(
-            '未可知错误，大部分是由于后端不支持跨域CORS或无效配置引起，请参考 https://ng-alain.com/docs/server 解决跨域问题',
+            'Lỗi không xác định, chủ yếu do phần phụ trợ không hỗ trợ CORS tên miền chéo hoặc cấu hình không hợp lệ, vui lòng tham khảo https://ng-alain.com/docs/server để giải quyết các vấn đề về tên miền chéo',
             ev,
           );
         }

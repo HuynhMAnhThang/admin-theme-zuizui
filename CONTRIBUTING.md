@@ -199,3 +199,111 @@ A detailed explanation can be found in this [document][commit-message-format].
 [commit-message-format]: https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#
 [github]: https://github.com/ng-alain/ng-alain
 [plunker]: http://plnkr.co/edit
+
+
+# Đóng góp cho ng-alain
+
+Chúng tôi rất mong bạn đóng góp cho ng-alain và giúp làm cho nó tốt hơn
+hôm nay! Với tư cách là người đóng góp, đây là các nguyên tắc mà chúng tôi muốn bạn làm theo:
+
+ - [Sự cố và lỗi] (# sự cố)
+ - [Yêu cầu tính năng] (# tính năng)
+ - [Nguyên tắc đệ trình] (# đệ trình)
+ - [Quy tắc mã hóa] (# quy tắc)
+ - [Nguyên tắc thông báo cam kết] (# cam kết)
+
+## <a name="issue"> </a> Tìm thấy lỗi?
+Nếu bạn tìm thấy lỗi trong mã nguồn, bạn có thể giúp chúng tôi bằng cách
+[gửi sự cố] (# submit-issue) tới [GitHub Repository] [github] của chúng tôi. Tốt hơn nữa, bạn có thể
+[gửi Yêu cầu kéo] (# submit-pr) với một bản sửa lỗi.
+
+## <a name="feature"> </a> Thiếu Tính năng?
+Bạn có thể * yêu cầu * một tính năng mới bằng cách [gửi vấn đề] (# gửi vấn đề) tới GitHub của chúng tôi
+Kho. Nếu bạn muốn * triển khai * một tính năng mới, vui lòng gửi vấn đề với
+trước tiên cho công việc của bạn, để chắc chắn rằng chúng tôi có thể sử dụng nó.
+Vui lòng xem xét loại thay đổi đó là:
+
+* Đối với ** Tính năng chính **, trước tiên hãy mở một vấn đề và phác thảo đề xuất của bạn để nó có thể
+thảo luận. Điều này cũng sẽ cho phép chúng tôi phối hợp tốt hơn các nỗ lực của mình, ngăn chặn sự trùng lặp công việc,
+và giúp bạn soạn thảo thay đổi để nó được chấp nhận thành công vào dự án.
+* ** Các tính năng nhỏ ** có thể được tạo và trực tiếp [gửi dưới dạng Yêu cầu kéo] (# submit-pr).
+
+## <a name="submit"> </a> Nguyên tắc Gửi
+
+### <a name="submit-issue"> </a> Gửi Vấn đề
+
+Trước khi bạn gửi một vấn đề, vui lòng tìm kiếm trình theo dõi vấn đề, có thể một vấn đề cho vấn đề của bạn đã tồn tại và cuộc thảo luận có thể thông báo cho bạn về các giải pháp có sẵn.
+
+Chúng tôi muốn khắc phục tất cả các vấn đề càng sớm càng tốt, nhưng trước khi sửa lỗi, chúng tôi cần tạo lại và xác nhận lỗi đó. Để tái tạo các lỗi, chúng tôi sẽ yêu cầu bạn cung cấp một kịch bản tái tạo tối thiểu bằng cách sử dụng http://plnkr.co một cách có hệ thống. Có một kịch bản trực tiếp, có thể tái tạo cung cấp cho chúng tôi vô số thông tin quan trọng mà không cần gửi lại cho bạn những câu hỏi bổ sung như:
+
+- phiên bản của ng-alain được sử dụng
+- Thư viện của bên thứ 3 và các phiên bản của chúng
+- và quan trọng nhất - một ca sử dụng không thành công
+
+Một kịch bản tái tạo tối thiểu bằng cách sử dụng http://plnkr.co/ cho phép chúng tôi nhanh chóng xác nhận một lỗi (hoặc chỉ ra vấn đề mã hóa) cũng như xác nhận rằng chúng tôi đang khắc phục đúng sự cố. Nếu plunker không phải là cách thích hợp để chứng minh vấn đề (ví dụ: đối với các vấn đề liên quan đến bao bì npm của chúng tôi), vui lòng tạo một kho lưu trữ git độc lập để giải thích vấn đề.
+
+Chúng tôi sẽ nhấn mạnh vào một kịch bản tái tạo tối thiểu để tiết kiệm thời gian cho người bảo trì và cuối cùng có thể sửa nhiều lỗi hơn. Điều thú vị là từ kinh nghiệm của chúng tôi, người dùng thường tự tìm ra các vấn đề về mã hóa trong khi chuẩn bị một đoạn mã tối thiểu. Chúng tôi hiểu rằng đôi khi có thể khó trích xuất các bit mã cần thiết từ một cơ sở mã lớn hơn nhưng chúng tôi thực sự cần phải cô lập vấn đề trước khi có thể khắc phục.
+
+Rất tiếc, chúng tôi không thể điều tra / sửa lỗi mà không có bản sao chép tối thiểu, vì vậy nếu chúng tôi không nhận được phản hồi từ bạn, chúng tôi sẽ đóng một sự cố không có đủ thông tin để tái tạo.
+
+Bạn có thể gửi các vấn đề mới bằng cách điền vào [biểu mẫu vấn đề mới] của chúng tôi (https://github.com/ng-alain/ng-alain/issues/new).
+
+
+### <a name="submit-pr"> </a> Gửi Yêu cầu kéo (PR)
+Trước khi bạn gửi Yêu cầu kéo (PR), hãy xem xét các nguyên tắc sau:
+
+* Tìm kiếm [GitHub] (https://github.com/ng-alain/ng-alain/pulls) để biết PR mở hoặc đóng
+  liên quan đến trình của bạn. Bạn không muốn nhân đôi nỗ lực.
+* Thực hiện các thay đổi của bạn trong một nhánh git mới:
+
+  `` vỏ
+  git checkout -b my-fix-branch master
+  ``
+
+* Tạo bản vá của bạn, ** bao gồm các trường hợp thử nghiệm thích hợp **.
+* Tuân theo [Quy tắc viết mã] (# quy tắc) của chúng tôi.
+* Chạy bộ thử nghiệm ng-alain đầy đủ <! -, như được mô tả trong [tài liệu dành cho nhà phát triển] [dev-doc] -> và đảm bảo rằng tất cả các thử nghiệm đều vượt qua.
+* Cam kết các thay đổi của bạn bằng cách sử dụng thông báo cam kết mô tả theo sau của chúng tôi
+  [quy ước thông báo cam kết] (# cam kết). Tuân thủ các quy ước này
+  là cần thiết vì ghi chú phát hành được tạo tự động từ những thông báo này.
+
+  `` vỏ
+  git cam kết -a
+  ``
+
+  Lưu ý: tùy chọn dòng lệnh commit `-a` tùy chọn sẽ tự động" thêm "và các tệp đã chỉnh sửa" rm ".
+
+* Đẩy chi nhánh của bạn lên GitHub:
+
+  `` vỏ
+  git push origin my-fix-branch
+  ``
+
+* Trong GitHub, gửi một yêu cầu kéo tới `ng-alain: master`.
+* Nếu chúng tôi đề xuất các thay đổi thì:
+  * Thực hiện các cập nhật cần thiết.
+  * Chạy lại bộ kiểm tra ng-alain để đảm bảo các bài kiểm tra vẫn đang vượt qua.
+  * Căn cứ lại chi nhánh của bạn và buộc đẩy vào kho lưu trữ GitHub của bạn (điều này sẽ cập nhật Yêu cầu kéo của bạn):
+
+  `` vỏ
+  git rebase master -i
+  git push -f
+  ``
+
+Đó là nó! Cảm ơn sự đóng góp của bạn!
+
+#### Sau khi hợp nhất yêu cầu kéo của bạn
+
+Sau khi yêu cầu kéo của bạn được hợp nhất, bạn có thể xóa nhánh của mình một cách an toàn và kéo các thay đổi
+từ kho lưu trữ chính (ngược dòng):
+
+* Xóa nhánh từ xa trên GitHub thông qua giao diện người dùng web GitHub hoặc trình bao cục bộ của bạn như sau:
+
+  `` vỏ
+  git push origin - xóa my-fix-branch
+  ``
+
+* Kiểm tra chi nhánh chủ:
+
+  `` vỏ
+  git tổng thể thanh toán

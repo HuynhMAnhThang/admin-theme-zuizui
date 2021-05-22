@@ -7,11 +7,6 @@ import { environment } from '@env/environment';
   selector: 'layout-basic',
   template: `
     <layout-default [options]="options" [asideUser]="asideUserTpl" [content]="contentTpl">
-      <layout-default-header-item direction="left">
-        <a layout-default-header-item-trigger href="//github.com/ng-alain/ng-alain" target="_blank">
-          <i nz-icon nzType="github"></i>
-        </a>
-      </layout-default-header-item>
       <layout-default-header-item direction="left" hidden="mobile">
         <a layout-default-header-item-trigger routerLink="/passport/lock">
           <i nz-icon nzType="lock"></i>
