@@ -29,7 +29,7 @@ export class ExtrasPoiComponent {
       width: '180px',
       buttons: [
         {
-          text: '编辑',
+          text: 'chỉnh sửa',
           type: 'modal',
           modal: {
             component: ExtrasPoiEditComponent,

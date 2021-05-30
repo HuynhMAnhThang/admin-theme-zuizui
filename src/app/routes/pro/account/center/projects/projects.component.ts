@@ -21,6 +21,6 @@ export class ProAccountCenterProjectsComponent {
   }
 
   suc(id: number): void {
-    this.msg.success(`标题：${id}`);
+    this.msg.success(`tiêu đề：${id}`);
   }
 }

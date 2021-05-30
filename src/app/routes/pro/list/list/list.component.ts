@@ -12,15 +12,15 @@ export class ProListLayoutComponent implements OnInit, OnDestroy {
   tabs = [
     {
       key: 'articles',
-      tab: '文章',
+      tab: 'bài báo',
     },
     {
       key: 'applications',
-      tab: '应用',
+      tab: 'ứng dụng',
     },
     {
       key: 'projects',
-      tab: '项目',
+      tab: 'dự án',
     },
   ];
 

@@ -1,6 +1,6 @@
 <nz-card [nzBordered]="false">
   <form nz-form se-container="1" size="compact" [gutter]="32" [labelWidth]="null">
-    <se label="所属类目" line>
+    <se label="Danh mục liên kết" line>
       <tag-select>
         <nz-tag
           *ngFor="let i of categories; let idx = index"
@@ -12,21 +12,21 @@
         </nz-tag>
       </tag-select>
     </se>
-    <se label="其它选项">
+    <se label="Sự lựa chọn khác">
       <div class="ant-form ant-form-inline">
         <nz-form-item>
-          <nz-form-label nzFor="rate">作者</nz-form-label>
+          <nz-form-label nzFor="rate">Tác giả</nz-form-label>
           <nz-form-control>
-            <nz-select [(ngModel)]="q.user" name="user" [nzPlaceHolder]="'不限'" [nzShowSearch]="true" style="width: 100px">
-              <nz-option [nzLabel]="'李三'" [nzValue]="'lisa'"></nz-option>
+            <nz-select [(ngModel)]="q.user" name="user" [nzPlaceHolder]="'Lựa chọn thoải mái'" [nzShowSearch]="true" style="width: 100px">
+              <nz-option [nzLabel]="'Thắng'" [nzValue]="'lisa'"></nz-option>
             </nz-select>
           </nz-form-control>
         </nz-form-item>
         <nz-form-item>
-          <nz-form-label nzFor="rate">好评度</nz-form-label>
+          <nz-form-label nzFor="rate">Khen ngợi</nz-form-label>
           <nz-form-control>
-            <nz-select [(ngModel)]="q.rate" name="rate" [nzPlaceHolder]="'不限'" [nzShowSearch]="true" style="width: 100px">
-              <nz-option [nzLabel]="'优秀'" [nzValue]="'good'"></nz-option>
+            <nz-select [(ngModel)]="q.rate" name="rate" [nzPlaceHolder]="'Lựa chọn thoải mái'" [nzShowSearch]="true" style="width: 100px">
+              <nz-option [nzLabel]="'thông minh'" [nzValue]="'good'"></nz-option>
             </nz-select>
           </nz-form-control>
         </nz-form-item>
@@ -43,7 +43,7 @@
         </ng-template>
         <nz-card-meta [nzTitle]="nzTitle" [nzDescription]="item.subDescription">
           <ng-template #nzTitle>
-            <a (click)="msg.success('标题：' + item.id)">{{ item.title }}</a>
+            <a (click)="msg.success('tiêu đề：' + item.id)">{{ item.title }}</a>
           </ng-template>
         </nz-card-meta>
         <div class="card-item-content">

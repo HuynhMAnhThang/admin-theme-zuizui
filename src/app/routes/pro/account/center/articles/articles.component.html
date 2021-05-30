@@ -13,8 +13,8 @@
     <p>{{ item.content }}</p>
     <div class="mt-md d-flex">
       <nz-avatar [nzSrc]="item.avatar" [nzSize]="'small'" class="mr-sm"></nz-avatar>
-      <a href="{{ item.href }}" target="_blank">{{ item.owner }}</a>
-      <span class="px-sm">发布在</span>
+      <a href="{{ item.href }}" target="_blank">{{ item.Owner }}</a>
+      <span class="px-sm">Đã đăng trên</span>
       <a href="{{ item.href }}" target="_blank">{{ item.href }}</a>
       <time class="pl-md text-grey" title="{{ item.updatedAt }}">{{ item.updatedAt | _date }}</time>
     </div>

@@ -1,140 +1,143 @@
-<page-header [title]="'单号：234231029431'" [logo]="logo" [action]="action" [extra]="extra" [tab]="tab">
+<page-header [title]="'Số đặt hàng: 234231029431'" [logo]="logo" [action]="action" [extra]="extra" [tab]="tab">
   <ng-template #logo>
     <img src="https://gw.alipayobjects.com/zos/rmsportal/nxkuOJlFJuAUhzlMTCEe.png" />
   </ng-template>
   <ng-template #action>
     <nz-button-group>
-      <button nz-button>操作</button>
-      <button nz-button>操作</button>
+      <button nz-button>Điều hành</button>
+      <button nz-button>Điều hành</button>
     </nz-button-group>
     <button nz-button nz-dropdown [nzDropdownMenu]="opMenu" class="mx-sm">
       <i nz-icon nzType="ellipsis"></i>
     </button>
     <nz-dropdown-menu #opMenu="nzDropdownMenu">
       <ul nz-menu>
-        <li nz-menu-item>选项一</li>
-        <li nz-menu-item>选项二</li>
-        <li nz-menu-item>选项三</li>
+        <li nz-menu-item> Lựa chọn một </li>
+        <li nz-menu-item> Phương án hai </li>
+        <li nz-menu-item> Tùy chọn Ba </li>
       </ul>
     </nz-dropdown-menu>
-    <button nz-button [nzType]="'primary'">主操作</button>
+    <button nz-button [nzType]="'primary'"> Hoạt động chính </button>
   </ng-template>
   <ng-template #extra>
     <div nz-row>
       <div nz-col nzXs="24" nzSm="12">
-        <p class="text-grey">状态</p>
-        <p class="text-lg">待审批</p>
+        <p class="text-grey"> Trạng thái </p>
+        <p class="text-lg"> Đang chờ phê duyệt </p>
       </div>
       <div nz-col nzXs="24" nzSm="12">
-        <p class="text-grey">订单金额</p>
-        <p class="text-lg">¥ 568.08</p>
+        <p class="text-grey"> Số tiền đặt hàng </p>
+        <p class="text-lg">568.08 VND</p>
       </div>
     </div>
   </ng-template>
   <ng-template #tab>
     <nz-tabset>
-      <nz-tab nzTitle="详情"></nz-tab>
-      <nz-tab nzTitle="规则"></nz-tab>
+      <nz-tab nzTitle="Chi tiết"></nz-tab>
+      <nz-tab nzTitle="nguyên tắc"></nz-tab>
     </nz-tabset>
   </ng-template>
   <sv-container size="small" col="2">
-    <sv label="创建人">曲丽丽</sv>
-    <sv label="订购产品">XX 服务</sv>
-    <sv label="创建时间">2017-07-07</sv>
-    <sv label="关联单据">
+    <sv label="Creator"> Qu Lili </sv>
+    <sv label="Đặt hàng Sản phẩm"> Dịch vụ XX </sv>
+    <sv label="Created time"> 2017-07-07 </sv>
+    <sv label="Tài liệu được Liên kết">
       <a (click)="msg.success('yes')">12421</a>
     </sv>
-    <sv label="生效日期">2017-07-07 ~ 2017-08-08</sv>
-    <sv label="备注">请于两个工作日内确认</sv>
+    <sv label="ngày hiệu lực"> 2017-07-07 ~ 2017-08-08 </sv>
+    <sv label="Note"> Vui lòng xác nhận trong vòng hai ngày làm việc </sv>
   </sv-container>
 </page-header>
-<nz-card [nzBordered]="false" class="mb-lg" nzTitle="流程进度">
+<nz-card [nzBordered]="false" class="mb-lg" nzTitle="Quá trình tiến trình">
   <nz-steps [nzCurrent]="1" nzProgressDot>
-    <nz-step [nzTitle]="'创建项目'" [nzDescription]="createDesc">
+    <nz-step [nzTitle]="'Tạo dự án'" [nzDescription]="createDesc">
       <ng-template #createDesc>
         <div class="desc">
           <div class="my-sm">
-            曲丽丽
+            Qu Lili
             <i nz-icon nzType="dingding" class="ml-sm"></i>
           </div>
           <div>2016-12-12 12:32</div>
         </div>
       </ng-template>
     </nz-step>
-    <nz-step [nzTitle]="'部门初审'" [nzDescription]="checkedDesc">
+    <nz-step [nzTitle]="'Đánh giá sơ bộ của bộ phận'" [nzDescription]="checkedDesc">
       <ng-template #checkedDesc>
         <div class="desc">
           <div class="my-sm">
-            周毛毛
+            Zhou Maomao
             <i nz-icon nzType="dingding" class="ml-sm" style="color: #00a0e9;"></i>
           </div>
-          <a (click)="msg.success('click')">催一下</a>
+          <a (click)="msg.success('click')">Nhanh</a>
         </div>
       </ng-template>
     </nz-step>
-    <nz-step [nzTitle]="'财务复核'"></nz-step>
-    <nz-step [nzTitle]="'完成'"></nz-step>
+    <nz-step [nzTitle]="'Đánh giá Tài chính'"> </nz-step>
+    <nz-step [nzTitle]="'Xong'"> </nz-step>
   </nz-steps>
-  <div class="steps-content"></div>
+  <div class="steps-content"> </div>
 </nz-card>
-<nz-card [nzBordered]="false" nzTitle="用户信息" class="mb-lg">
+<nz-card [nzBordered]="false" nzTitle="Thông tin người dùng" class="mb-lg">
   <sv-container class="mb-lg">
-    <sv label="用户姓名">付小小</sv>
-    <sv label="会员卡号">32943898021309809423</sv>
-    <sv label="身份证">3321944288191034921</sv>
-    <sv label="联系方式">18112345678</sv>
-    <sv label="联系地址">曲丽丽 18100000000 浙江省杭州市西湖区黄姑山路工专路交叉路口</sv>
+    <sv label="user name"> Fu Xiaoxiao </sv>
+    <sv label="Số thẻ thành viên"> 32943898021309809423 </sv>
+    <sv label="ID card"> 3321944288191034921 </sv>
+    <sv label="Thông tin liên hệ"> 18112345678 </sv>
+    <sv label="Địa chỉ liên hệ"> Qu Lili 18100000000 Giao lộ Gongzhuan Road, Huanggushan Road, Xihu District, Hangzhou
+      City, Zhejiang Province </sv>
   </sv-container>
-  <sv-container class="mb-lg" title="信息组">
-    <sv label="某某数据">725</sv>
-    <sv label="该数据更新时间">2017-08-08</sv>
-    <sv>&nbsp;</sv>
+  <sv-container class="mb-lg" title="Nhóm thông tin">
+    <sv label="XXX data"> 725 </sv>
+    <sv label="Thời gian cập nhật dữ liệu"> 2017-08-08 </sv>
+    <sv> & nbsp; </sv>
     <sv [label]="label">
       <ng-template #label>
-        某某数据
-        <i nz-tooltip nzTooltipTitle="数据说明" nz-icon nzType="info-circle"></i>
+        Vì vậy, dữ liệu
+        <i nz-tooltip nzTooltipTitle="Mô tả dữ liệu" nz-icon nzType="info-circle"> </i>
       </ng-template>
       725
     </sv>
-    <sv label="该数据更新时间">2017-08-08</sv>
+    <sv label="Thời gian cập nhật dữ liệu"> 2017-08-08 </sv>
   </sv-container>
-  <h4 class="mb-md">信息组</h4>
-  <nz-card nzType="inner" nzTitle="多层级信息组">
-    <sv-container size="small" title="组名称">
-      <sv label="负责人">林东东</sv>
-      <sv label="角色码">1234567</sv>
-      <sv label="所属部门">XX公司 - YY部</sv>
-      <sv label="过期时间">2017-08-08</sv>
-      <sv label="描述">这段描述很长很长很长很长很长很长很长很长很长很长很长很长很长很长...</sv>
+  <h4 class="mb-md"> Nhóm thông tin </h4>
+  <nz-card nzType="inner" nzTitle="Nhóm thông tin đa cấp">
+    <sv-container size="small" title="tên nhóm">
+      <sv label="người phụ trách"> Lin Dongdong </sv>
+      <sv label="role code"> 1234567 </sv>
+      <sv label="Department"> XX Company-YY Department </sv>
+      <sv label="Thời gian hết hạn"> 2017-08-08 </sv>
+      <sv label="sự miêu tả"> Sự miêu tả này rất dài, rất dài, rất dài, rất dài, rất dài, rất dài, rất dài, rất dài, rất
+        dài, rất dài ... </sv>
     </sv-container>
     <nz-divider></nz-divider>
-    <sv-container size="small" title="组名称" col="1">
-      <sv label="学名">
-        Citrullus lanatus (Thunb.) Matsum. et Nakai一年生蔓生藤本；茎、枝粗壮，具明显的棱。卷须较粗..
+    <sv-container size="small" title="tên nhóm" col="1">
+      <sv label="tên khoa học">
+        Citrullus lanatus (Thunb.) Matsum. Et Nakai là cây nho leo hàng năm, thân và cành cứng cáp, có các cạnh rõ rệt.
+        Các tua dày hơn ...
       </sv>
     </sv-container>
     <nz-divider></nz-divider>
-    <sv-container size="small" title="组名称">
-      <sv label="负责人">付小小</sv>
-      <sv label="角色码">1234568</sv>
+    <sv-container size="small" title="tên nhóm">
+      <sv label="người phụ trách"> Fu Xiaoxiao </sv>
+      <sv label="role code"> 1234568 </sv>
     </sv-container>
   </nz-card>
 </nz-card>
-<nz-card [nzBordered]="false" nzTitle="用户近半年来电记录" class="mb-lg">
-  <div class="no-data"><i nz-icon nzType="frown"></i>暂无数据</div>
+<nz-card [nzBordered]="false" nzTitle="Bản ghi cuộc gọi điện thoại của người dùng trong sáu tháng qua" class="mb-lg">
+  <div class="no-data"> <i nz-icon nzType="frown"> </i> Chưa có dữ liệu </div>
 </nz-card>
 <nz-card [nzBordered]="false">
   <nz-card-tab>
     <nz-tabset nzSize="large" (nzSelectChange)="change($event)">
-      <nz-tab nzTitle="操作日志一"></nz-tab>
-      <nz-tab nzTitle="操作日志二"></nz-tab>
-      <nz-tab nzTitle="操作日志三"></nz-tab>
+      <nz-tab nzTitle="Nhật ký Hoạt động Một"> </nz-tab>
+      <nz-tab nzTitle="Nhật ký Hoạt động 2"> </nz-tab>
+      <nz-tab nzTitle="Nhật ký Hoạt động Ba"> </nz-tab>
     </nz-tabset>
   </nz-card-tab>
   <st [columns]="opColumns" [data]="list">
     <ng-template st-row="status" let-i>
-      <nz-badge *ngIf="i.status === 'success'" [nzStatus]="'success'" [nzText]="'成功'"></nz-badge>
-      <nz-badge *ngIf="i.status !== 'success'" [nzStatus]="'processing'" [nzText]="'进行中'"></nz-badge>
+      <nz-badge *ngIf="i.status === 'success'" [nzStatus]="'success'" [nzText]="'Thành công'"></nz-badge>
+      <nz-badge *ngIf="i.status !== 'success'" [nzStatus]="'processing'" [nzText]="'Đang Xử lý'"></nz-badge>
     </ng-template>
   </st>
 </nz-card>

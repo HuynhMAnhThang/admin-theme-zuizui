@@ -1,15 +1,16 @@
-<result type="success" [title]="'操作成功'" description="预计两小时内到账" [extra]="resultExtra">
+<result type="success" [title]="'Hoạt động thành công'" description="Ước tính sẽ đến trong vòng hai giờ"
+  [extra]="resultExtra">
   <ng-template #resultExtra>
     <div sv-container col="1" labelWidth="150">
-      <sv label="付款账户">{{ item.pay_account }}</sv>
-      <sv label="账户类型">{{ item.receiver_type_str }}</sv>
-      <sv label="收款账户">{{ item.receiver_account }}</sv>
-      <sv label="转账金额">
+      <sv label="tài khoản thanh toán"> {{item.pay_account}} </sv>
+      <sv label="account type"> {{item.receiver_type_str}} </sv>
+      <sv label="tài khoản nhận"> {{item.receiver_account}} </sv>
+      <sv label="Số tiền chuyển">
         <strong class="text-lg pr-sm">{{ item.amount }}</strong>
-        元
+        VND
       </sv>
     </div>
   </ng-template>
-  <button nz-button (click)="item.again()" [nzType]="'primary'">再转一笔</button>
-  <button nz-button class="ml-sm">查看账单</button>
+  <button nz-button (click)="item.again ()" [nzType]="'primary'"> Chuyển một nét khác </button>
+  <button nz-button class="ml-sm"> Xem hóa đơn </button>
 </result>

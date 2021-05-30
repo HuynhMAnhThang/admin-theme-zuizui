@@ -27,13 +27,13 @@ export class DashboardAnalysisComponent implements OnInit {
       };
     });
   titleMap = {
-    y1: this.i18n.fanyi('app.analysis.traffic'),
+    y1: this.i18n.fanyi('app.analysis.Traffic'),
     y2: this.i18n.fanyi('app.analysis.payments'),
   };
   searchColumn: STColumn[] = [
     { title: { text: '排名', i18n: 'app.analysis.table.rank' }, index: 'index' },
     {
-      title: { text: '搜索关键词', i18n: 'app.analysis.table.search-keyword' },
+      title: { text: 'Tìm kiếm关键词', i18n: 'app.analysis.table.search-keyword' },
       index: 'keyword',
       click: (item) => this.msg.success(item.keyword),
     },

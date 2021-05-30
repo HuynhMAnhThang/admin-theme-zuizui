@@ -30,34 +30,34 @@ export class ProTableListComponent implements OnInit {
   data: any[] = [];
   loading = false;
   status = [
-    { index: 0, text: '关闭', value: false, type: 'default', checked: false },
+    { index: 0, text: 'tắt', value: false, type: 'default', checked: false },
     {
       index: 1,
-      text: '运行中',
+      text: 'Đang chạy',
       value: false,
       type: 'processing',
       checked: false,
     },
-    { index: 2, text: '已上线', value: false, type: 'success', checked: false },
-    { index: 3, text: '异常', value: false, type: 'error', checked: false },
+    { index: 2, text: 'Trực tuyến', value: false, type: 'success', checked: false },
+    { index: 3, text: 'khác thường', value: false, type: 'error', checked: false },
   ];
   @ViewChild('st', { static: true })
   st!: STComponent;
   columns: STColumn[] = [
     { title: '', index: 'key', type: 'checkbox' },
-    { title: '规则编号', index: 'no' },
-    { title: '描述', index: 'description' },
+    { title: 'Quy tắc số', index: 'no' },
+    { title: 'sự miêu tả', index: 'description' },
     {
-      title: '服务调用次数',
+      title: 'Số lượng cuộc gọi dịch vụ',
       index: 'callNo',
       type: 'number',
-      format: (item) => `${item.callNo} 万`,
+      format: (item) => `${item.callNo} 0000 VND`,
       sort: {
         compare: (a, b) => a.callNo - b.callNo,
       },
     },
     {
-      title: '状态',
+      title: 'trạng thái',
       index: 'status',
       render: 'status',
       filter: {
@@ -66,7 +66,7 @@ export class ProTableListComponent implements OnInit {
       },
     },
     {
-      title: '更新时间',
+      title: 'Cập nhật thời gian',
       index: 'updatedAt',
       type: 'date',
       sort: {
@@ -74,15 +74,15 @@ export class ProTableListComponent implements OnInit {
       },
     },
     {
-      title: '操作',
+      title: 'điều hành',
       buttons: [
         {
-          text: '配置',
-          click: (item) => this.msg.success(`配置${item.no}`),
+          text: 'Cấu hình',
+          click: (item) => this.msg.success(`Cấu hình${item.no}`),
         },
         {
-          text: '订阅警报',
-          click: (item) => this.msg.success(`订阅警报${item.no}`),
+          text: 'Đăng ký nhận thông báo',
+          click: (item) => this.msg.success(`Đăng ký nhận thông báo${item.no}`),
         },
       ],
     },
@@ -144,12 +144,12 @@ export class ProTableListComponent implements OnInit {
   }
 
   approval(): void {
-    this.msg.success(`审批了 ${this.selectedRows.length} 笔`);
+    this.msg.success(`Tán thành ${this.selectedRows.length} cây bút`);
   }
 
   add(tpl: TemplateRef<{}>): void {
     this.modalSrv.create({
-      nzTitle: '新建规则',
+      nzTitle: 'Quy tắc mới',
       nzContent: tpl,
       nzOnOk: () => {
         this.loading = true;

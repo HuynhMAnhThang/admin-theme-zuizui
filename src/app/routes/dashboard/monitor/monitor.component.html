@@ -33,7 +33,7 @@
   <div nz-col nzXs="24" nzSm="24" nzMd="24" nzLg="6">
     <nz-card [nzTitle]="'app.monitor.activity-forecast' | translate" [nzBordered]="false" class="mb-lg">
       <div class="active-chart" *ngIf="activeData">
-        <number-info subTitle="目标评估" total="有望达到预期"></number-info>
+        <number-info subTitle="mục đích评估" total="Dự kiến kỳ vọng đáp ứng"></number-info>
         <g2-mini-area [animate]="false" line [borderWidth]="2" [height]="84" [padding]="0" [data]="activeData"></g2-mini-area>
         <div class="active-grid">
           <p>{{ activeStat.max }} 亿元</p>

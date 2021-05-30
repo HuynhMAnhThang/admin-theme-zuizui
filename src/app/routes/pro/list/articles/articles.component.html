@@ -1,38 +1,36 @@
 <nz-card [nzBordered]="false">
   <form nz-form se-container="1" size="compact" [gutter]="32" [labelWidth]="null">
-    <se label="所属类目" line>
+    <se label="Danh mục liên kết" line>
       <tag-select>
-        <nz-tag
-          *ngFor="let i of categories; let idx = index"
-          nzMode="checkable"
-          [nzChecked]="i.value"
-          (nzCheckedChange)="changeCategory($event, idx)"
-        >
+        <nz-tag *ngFor="let i of categories; let idx = index" nzMode="checkable" [nzChecked]="i.value"
+          (nzCheckedChange)="changeCategory($event, idx)">
           {{ i.text }}
         </nz-tag>
       </tag-select>
     </se>
-    <se label="owner" line>
-      <nz-select [(ngModel)]="q.owners" name="owners" [nzMode]="'tags'" style="max-width: 286px">
-        <nz-option *ngFor="let i of owners" [nzLabel]="i.name" [nzValue]="i.id"></nz-option>
+    <se label="Owner" line>
+      <nz-select [(ngModel)]="q.Owners" name="Owners" [nzMode]="'tags'" style="max-width: 286px">
+        <nz-option *ngFor="let i of Owners" [nzLabel]="i.name" [nzValue]="i.id"></nz-option>
       </nz-select>
-      <a class="ml-sm" (click)="setOwner()">只看自己的</a>
+      <a class="ml-sm" (click)="setOwner()"> Chỉ cần xem xét của riêng bạn </a>
     </se>
-    <se label="其它选项">
+    <se label="Sự lựa chọn khác">
       <div class="ant-form ant-form-inline">
         <nz-form-item>
-          <nz-form-label nzFor="rate">作者</nz-form-label>
+          <nz-form-label nzFor="rate">Tác giả</nz-form-label>
           <nz-form-control>
-            <nz-select [(ngModel)]="q.user" name="user" [nzPlaceHolder]="'不限'" [nzShowSearch]="true" style="width: 100px">
-              <nz-option [nzLabel]="'李三'" [nzValue]="'lisa'"></nz-option>
+            <nz-select [(ngModel)]="q.user" name="user" [nzPlaceHolder]="'Lựa chọn thoải mái'" [nzShowSearch]="true"
+              style="width: 100px">
+              <nz-option [nzLabel]="'Thắng'" [nzValue]="'lisa'"></nz-option>
             </nz-select>
           </nz-form-control>
         </nz-form-item>
         <nz-form-item>
-          <nz-form-label nzFor="rate">好评度</nz-form-label>
+          <nz-form-label nzFor="rate">Khen ngợi</nz-form-label>
           <nz-form-control>
-            <nz-select [(ngModel)]="q.rate" name="rate" [nzPlaceHolder]="'不限'" [nzShowSearch]="true" style="width: 100px">
-              <nz-option [nzLabel]="'优秀'" [nzValue]="'good'"></nz-option>
+            <nz-select [(ngModel)]="q.rate" name="rate" [nzPlaceHolder]="'Lựa chọn thoải mái'" [nzShowSearch]="true"
+              style="width: 100px">
+              <nz-option [nzLabel]="'thông minh'" [nzValue]="'good'"></nz-option>
             </nz-select>
           </nz-form-control>
         </nz-form-item>
@@ -41,7 +39,8 @@
   </form>
 </nz-card>
 <nz-card [nzBordered]="false">
-  <nz-list nzItemLayout="vertical" [nzLoading]="loading" [nzDataSource]="list" [nzRenderItem]="item" [nzLoadMore]="loadMore">
+  <nz-list nzItemLayout="vertical" [nzLoading]="loading" [nzDataSource]="list" [nzRenderItem]="item"
+    [nzLoadMore]="loadMore">
     <ng-template #item let-item>
       <nz-list-item [nzContent]="nzContent" [nzExtra]="nzExtra" [nzActions]="[op1, op2, op3]">
         <ng-template #op1> <i nz-icon nzType="star" class="mr-sm"></i>{{ item.star }}</ng-template>
@@ -64,8 +63,8 @@
           <p>{{ item.content }}</p>
           <div class="mt-md d-flex">
             <nz-avatar [nzSrc]="item.avatar" [nzSize]="'small'" class="mr-sm"></nz-avatar>
-            <a href="{{ item.href }}" target="_blank">{{ item.owner }}</a>
-            <span class="px-sm">发布在</span>
+            <a href="{{ item.href }}" target="_blank">{{ item.Owner }}</a>
+            <span class="px-sm">Đã đăng trên</span>
             <a href="{{ item.href }}" target="_blank">{{ item.href }}</a>
             <time class="pl-md text-grey" title="{{ item.updatedAt }}">{{ item.updatedAt | _date }}</time>
           </div>
@@ -74,7 +73,8 @@
     </ng-template>
     <ng-template #loadMore>
       <div class="text-center mt-md">
-        <button nz-button (click)="getData(true)" [nzLoading]="loading" [nzType]="'dashed'" style="min-width: 200px">加载更多</button>
+        <button nz-button (click)="getData(true)" [nzLoading]="loading" [nzType]="'dashed'"
+          style="min-width: 200px">加载Thêm</button>
       </div>
     </ng-template>
   </nz-list>

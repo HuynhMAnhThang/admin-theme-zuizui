@@ -121,7 +121,7 @@
         *ngIf="offlineChartData"
         [data]="offlineChartData"
         [height]="289"
-        [titleMap]="{ y1: '客流量', y2: '支付笔数' }"
+        [titleMap]="{ y1: 'Tiền đi', y2: 'Tiền về' }"
       ></g2-timeline>
     </nz-card>
   </div>
@@ -147,7 +147,7 @@
   <div nz-col nzXs="24" nzMd="12">
     <nz-card [nzTitle]="recentTitle" [nzBordered]="false" class="ant-card__body-nopadding">
       <ng-template #recentTitle>
-        Recent Posts
+        Bài viết gần đây
         <small class="text-sm font-weight-normal">Venenatis portauam Inceptos ameteiam</small>
       </ng-template>
       <div nz-row [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm pr-md bg-grey-lighter-h point" *ngFor="let item of todoData">
@@ -162,7 +162,7 @@
     </nz-card>
   </div>
   <div nz-col nzXs="24" nzMd="12">
-    <nz-card nzTitle="Todo lists" [nzBordered]="false" class="ant-card__body-nopadding">
+    <nz-card nzTitle="Danh sách công việcs" [nzBordered]="false" class="ant-card__body-nopadding">
       <div nz-row [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm pr-md bg-grey-lighter-h point" *ngFor="let item of todoData">
         <div nz-col [nzSpan]="4" class="text-center">
           <nz-avatar [nzSrc]="'./assets/tmp/img/' + item.avatar + '.png'"></nz-avatar>

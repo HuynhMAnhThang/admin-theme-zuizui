@@ -19,11 +19,11 @@ export class ProProfileAdvancedComponent implements OnInit {
     advancedOperation3: [],
   };
   opColumns: STColumn[] = [
-    { title: '操作类型', index: 'type' },
-    { title: '操作人', index: 'name' },
-    { title: '执行结果', index: 'status', render: 'status' },
-    { title: '操作时间', index: 'updatedAt', type: 'date' },
-    { title: '备注', index: 'memo', default: '-' },
+    {title: 'Kiểu hoạt động', index: 'kiểu'},
+    {title: 'Operator', index: 'name'},
+    {title: 'Kết quả thực thi', index: 'status', render: 'status'},
+    {title: 'Thời gian hoạt động', index: 'updatedAt', type: 'date'},
+    {title: 'Remarks', index: 'memo', default: '-'},
   ];
 
   constructor(public msg: NzMessageService, private http: _HttpClient, private cdr: ChangeDetectorRef) {}

@@ -38,6 +38,8 @@ export class DashboardMonitorComponent implements OnInit, OnDestroy {
       this.data = res;
       tags.list[Math.floor(Math.random() * tags.list.length) + 1].value = 1000;
       this.tags = tags.list;
+      console.log(tags);
+
       this.loading = false;
       this.cdr.detectChanges();
     });

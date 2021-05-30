@@ -13,7 +13,7 @@ export class ProListArticlesComponent implements OnInit {
   q = {
     ps: 5,
     categories: [],
-    owners: ['zxx'],
+    Owners: ['zxx'],
     user: '',
     rate: '',
   };
@@ -23,43 +23,56 @@ export class ProListArticlesComponent implements OnInit {
 
   // region: cateogry
   categories = [
-    { id: 0, text: '全部', value: false },
-    { id: 1, text: '类目一', value: false },
-    { id: 2, text: '类目二', value: false },
-    { id: 3, text: '类目三', value: false },
-    { id: 4, text: '类目四', value: false },
-    { id: 5, text: '类目五', value: false },
-    { id: 6, text: '类目六', value: false },
-    { id: 7, text: '类目七', value: false },
-    { id: 8, text: '类目八', value: false },
-    { id: 9, text: '类目九', value: false },
-    { id: 10, text: '类目十', value: false },
-    { id: 11, text: '类目十一', value: false },
-    { id: 12, text: '类目十二', value: false },
+       { id: 0, text: 'Loại 1', value: false },
+    { id: 1, text: 'Loại 1', value: false },
+    { id: 2, text: 'Loại 4', value: false },
+    { id: 3, text: 'Loại 5', value: false },
+    { id: 4, text: 'Loại 5', value: false },
+    { id: 5, text: 'Loại 4', value: false },
+    { id: 6, text: 'Loại 4', value: false },
+    { id: 7, text: 'Loại 6', value: false },
+    { id: 8, text: 'Loại 8', value: false },
+    { id: 9, text: 'Loại 9', value: false },
+    { id: 10, text: 'Loại 10', value: false },
+    { id: 11, text: 'Loại 11', value: false },
+    { id: 12, text: 'Loại 12', value: false },
+    { id: 0, text: 'Loại 1', value: false },
+    { id: 1, text: 'Loại 1', value: false },
+    { id: 2, text: 'Loại 4', value: false },
+    { id: 3, text: 'Loại 5', value: false },
+    { id: 4, text: 'Loại 5', value: false },
+    { id: 5, text: 'Loại 4', value: false },
+    { id: 6, text: 'Loại 4', value: false },
+    { id: 7, text: 'Loại 6', value: false },
+    { id: 8, text: 'Loại 8', value: false },
+    { id: 9, text: 'Loại 9', value: false },
+    { id: 10, text: 'Loại 10', value: false },
+    { id: 11, text: 'Loại 11', value: false },
+    { id: 12, text: 'Loại 12', value: false },
   ];
   // endregion
 
-  // region: owners
-  owners = [
+  // region: Owners
+  Owners = [
     {
       id: 'wzj',
-      name: '我自己',
+      name: 'Bản thân tôi',
     },
     {
       id: 'wjh',
-      name: '吴家豪',
+      name: 'Wu Jiahao',
     },
     {
       id: 'zxx',
-      name: '周星星',
+      name: 'Zhou Xingxing',
     },
     {
       id: 'zly',
-      name: '赵丽颖',
+      name: 'Zhao Liying',
     },
     {
       id: 'ym',
-      name: '姚明',
+      name: 'Yao Ming',
     },
   ];
 
@@ -72,7 +85,7 @@ export class ProListArticlesComponent implements OnInit {
   }
 
   setOwner(): void {
-    this.q.owners = [`wzj`];
+    this.q.Owners = [`wzj`];
     // TODO: wait nz-dropdown OnPush mode
     setTimeout(() => this.cdr.detectChanges());
   }

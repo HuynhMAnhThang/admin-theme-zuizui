@@ -23,25 +23,25 @@ import { NzMessageService } from 'ng-zorro-antd/message';
 export class HeaderNotifyComponent {
   data: NoticeItem[] = [
     {
-      title: '通知',
+      title: 'Thông báo',
       list: [],
-      emptyText: '你已查看所有通知',
+      emptyText: 'Bạn đã xem tất cả Thông báo',
       emptyImage: 'https://gw.alipayobjects.com/zos/rmsportal/wAhyIChODzsoKIOBHcBk.svg',
-      clearText: '清空通知',
+      clearText: 'Xem tất cả Thông báo',
     },
     {
-      title: '消息',
+      title: 'Tin tức',
       list: [],
-      emptyText: '您已读完所有消息',
+      emptyText: 'Bạn đã đọc tất cả Tin tức',
       emptyImage: 'https://gw.alipayobjects.com/zos/rmsportal/sAuJeJzSKbUmHfBQRzmZ.svg',
-      clearText: '清空消息',
+      clearText: 'Xem tất cả Tin tức',
     },
     {
-      title: '待办',
+      title: 'Đang chờ xử lý',
       list: [],
-      emptyText: '你已完成所有待办',
+      emptyText: 'Bạn đã làm tất cả Đang chờ xử lý',
       emptyImage: 'https://gw.alipayobjects.com/zos/rmsportal/HsIsxMZiWKrNUavQUXqx.svg',
-      clearText: '清空待办',
+      clearText: 'Xem tất cả Đang chờ xử lý',
     },
   ];
   count = 5;
@@ -85,94 +85,94 @@ export class HeaderNotifyComponent {
         {
           id: '000000001',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
-          title: '你收到了 14 份新周报',
+          title: 'Bạn đã nhận được 14 báo cáo hàng tuần mới',
           datetime: add(now, { days: 10 }),
-          type: '通知',
+          type: 'Thông báo',
         },
         {
           id: '000000002',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/OKJXDXrmkNshAMvwtvhu.png',
-          title: '你推荐的 曲妮妮 已通过第三轮面试',
+          title: 'Qu Nini được đề xuất của bạn đã vượt qua vòng phỏng vấn thứ ba',
           datetime: add(now, { days: -3 }),
-          type: '通知',
+          type: 'Thông báo',
         },
         {
           id: '000000003',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/kISTdvpyTAhtGxpovNWd.png',
-          title: '这种模板可以区分多种通知类型',
+          title: 'Mẫu này có thể phân biệt nhiều loại Thông báo',
           datetime: add(now, { months: -3 }),
           read: true,
-          type: '通知',
+          type: 'Thông báo',
         },
         {
           id: '000000004',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/GvqBnKhFgObvnSGkDsje.png',
-          title: '左侧图标用于区分不同的类型',
+          title: 'Biểu tượng bên trái dùng để phân biệt các loại',
           datetime: add(now, { years: -1 }),
-          type: '通知',
+          type: 'Thông báo',
         },
         {
           id: '000000005',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/ThXAXghbEsBCCSDihZxY.png',
-          title: '内容不要超过两行字，超出时自动截断',
+          title: 'Nội dung không được vượt quá hai dòng và nó sẽ tự động bị cắt bớt khi vượt quá',
           datetime: '2017-08-07',
-          type: '通知',
+          type: 'Thông báo',
         },
         {
           id: '000000006',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
-          title: '曲丽丽 评论了你',
-          description: '描述信息描述信息描述信息',
+          title: 'Qu Lili đã nhận xét về bạn',
+          description: 'Loại mẫu này dùng để nhắc nhở những ai đã tương tác với bạn, hãy đặt ảnh đại diện của "ai" ở bên trái',
           datetime: '2017-08-07',
-          type: '消息',
+          type: 'Tin tức',
         },
         {
           id: '000000007',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
-          title: '朱偏右 回复了你',
-          description: '这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像',
+          title: 'Zhu Fangyou đã trả lời bạn',
+          description: 'Loại mẫu này dùng để nhắc nhở những ai đã tương tác với bạn, hãy đặt ảnh đại diện của "ai" ở bên trái',
           datetime: '2017-08-07',
-          type: '消息',
+          type: 'Tin tức',
         },
         {
           id: '000000008',
           avatar: 'https://gw.alipayobjects.com/zos/rmsportal/fcHMVNCjPOsbUGdEduuv.jpeg',
-          title: '标题',
-          description: '这种模板用于提醒谁与你发生了互动，左侧放『谁』的头像',
+          title: 'tiêu đề',
+          description: 'Loại mẫu này dùng để nhắc nhở những ai đã tương tác với bạn, hãy đặt ảnh đại diện của "ai" ở bên trái',
           datetime: '2017-08-07',
-          type: '消息',
+          type: 'Tin tức',
         },
         {
           id: '000000009',
-          title: '任务名称',
-          description: '任务需要在 2017-01-12 20:00 前启动',
-          extra: '未开始',
+          title: 'Tên nhiệm vụ',
+          description: 'Nhiệm vụ cần được bắt đầu trước 20:00 ngày 01-01-2017',
+          extra: 'chưa bắt đầu',
           status: 'todo',
-          type: '待办',
+          type: 'Đang chờ xử lý',
         },
         {
           id: '000000010',
-          title: '第三方紧急代码变更',
-          description: '冠霖提交于 2017-01-06，需在 2017-01-07 前完成代码变更任务',
-          extra: '马上到期',
+          title: 'Thay đổi mã khẩn cấp của bên thứ ba',
+          description: 'Guanlin được gửi vào 2017-01-06, nhiệm vụ thay đổi mã phải được hoàn thành trước 2017-01-07',
+          extra: 'Sắp hết hạn',
           status: 'urgent',
-          type: '待办',
+          type: 'Đang chờ xử lý',
         },
         {
           id: '000000011',
-          title: '信息安全考试',
-          description: '指派竹尔于 2017-01-09 前完成更新并发布',
-          extra: '已耗时 8 天',
+          title: 'Kỳ thi An toàn Thông tin',
+          description: 'Chỉ định Zhuer hoàn thành bản cập nhật và phát hành trước ngày 1 tháng 1 năm 2017',
+          extra: '8 ngày trôi qua',
           status: 'doing',
-          type: '待办',
+          type: 'Đang chờ xử lý',
         },
         {
           id: '000000012',
-          title: 'ABCD 版本发布',
-          description: '冠霖提交于 2017-01-06，需在 2017-01-07 前完成代码变更任务',
-          extra: '进行中',
+          title: 'ABCD Phiên bản phát hành',
+          description: 'Guanlin được gửi vào 2017-01-06, nhiệm vụ thay đổi mã phải được hoàn thành trước 2017-01-07',
+          extra: 'Xử lý',
           status: 'processing',
-          type: '待办',
+          type: 'Đang chờ xử lý',
         },
       ]);
 
@@ -182,10 +182,10 @@ export class HeaderNotifyComponent {
   }
 
   clear(type: string): void {
-    this.msg.success(`清空了 ${type}`);
+    this.msg.success(`làm trống ${type}`);
   }
 
   select(res: NoticeIconSelect): void {
-    this.msg.success(`点击了 ${res.title} 的 ${res.item.title}`);
+    this.msg.success(`Đã nhấp ${res.title} 的 ${res.item.title}`);
   }
 }

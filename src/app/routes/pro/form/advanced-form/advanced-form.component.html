@@ -1,32 +1,34 @@
-<page-header [title]="'高级表单'">
-  高级表单常见于一次性输入和提交大批量数据的场景。（示例采用响应式表单，也可使用模板驱动方式）
+<page-header [title]="'Hình thức nâng cao'">
+  Hình thức nâng cao nó thường xảy ra trong các tình huống mà số lượng lớn dữ liệu được nhập và gửi cùng một lúc. (Ví dụ
+  sử dụng các biểu mẫu đáp ứng và các phương pháp hướng mẫu cũng có thể được sử dụng)）
 </page-header>
 <form nz-form [formGroup]="form" (ngSubmit)="_submitForm()" [nzLayout]="'vertical'">
-  <nz-card [nzBordered]="false" nzTitle="仓库管理">
+  <nz-card [nzBordered]="false" nzTitle="Quản lý Kho hàng">
     <nz-row nzGutter="16">
       <nz-col nzLg="6" nzMd="12" nzSm="24">
         <nz-form-item>
-          <nz-form-label nzFor="name">仓库名</nz-form-label>
-          <nz-form-control nzErrorTip="请输入仓库名称">
-            <input nz-input formControlName="name" id="name" placeholder="请输入仓库名称" />
+          <nz-form-label nzFor="name">Tên kho hàng</nz-form-label>
+          <nz-form-control nzErrorTip="vui lòng nhập tên kho">
+            <input nz-input formControlName="name" id="name" placeholder="vui lòng nhập tên kho" />
           </nz-form-control>
         </nz-form-item>
       </nz-col>
       <nz-col [nzXl]="{ span: 6, offset: 2 }" [nzLg]="{ span: 8 }" [nzMd]="{ span: 12 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>仓库域名</nz-form-label>
-          <nz-form-control nzErrorTip="请输入仓库域名">
+          <nz-form-label>Tên miền kho</nz-form-label>
+          <nz-form-control nzErrorTip="vui lòng nhập Tên miền kho">
             <nz-input-group nzAddOnBefore="http://" nzAddOnAfter=".com">
-              <input nz-input formControlName="url" placeholder="请输入" />
+              <input nz-input formControlName="url" placeholder="vui lòng nhập" />
             </nz-input-group>
           </nz-form-control>
         </nz-form-item>
       </nz-col>
       <nz-col [nzXl]="{ span: 8, offset: 2 }" [nzLg]="{ span: 10 }" [nzMd]="{ span: 24 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>仓库管理员</nz-form-label>
-          <nz-form-control nzErrorTip="请选择管理员">
-            <nz-select formControlName="owner" [nzPlaceHolder]="'请选择管理员'" [nzShowSearch]="true">
+          <nz-form-label> Quản trị viên kho </nz-form-label>
+          <nz-form-control nzErrorTip="xin vui lòng chọn Quản trị viên">
+            <nz-select formControlName="Owner" [nzPlaceHolder]="'xin vui lòng chọn  Quản trị viên'"
+              [nzShowSearch]="true">
               <nz-option *ngFor="let i of users" [nzLabel]="i.label" [nzValue]="i.value"></nz-option>
             </nz-select>
           </nz-form-control>
@@ -36,9 +38,9 @@
     <nz-row nzGutter="16">
       <nz-col nzLg="6" nzMd="12" nzSm="24">
         <nz-form-item>
-          <nz-form-label>审批员</nz-form-label>
-          <nz-form-control nzErrorTip="请选择审批员">
-            <nz-select formControlName="approver" [nzPlaceHolder]="'请选择管理员'" [nzShowSearch]="true">
+          <nz-form-label>Giám khảo</nz-form-label>
+          <nz-form-control nzErrorTip="xin vui lòng chọn Giám khảo">
+            <nz-select formControlName="approver" [nzPlaceHolder]="'xin vui lòng chọn Giám khảo'" [nzShowSearch]="true">
               <nz-option *ngFor="let i of users" [nzLabel]="i.label" [nzValue]="i.value"> </nz-option>
             </nz-select>
           </nz-form-control>
@@ -46,7 +48,7 @@
       </nz-col>
       <nz-col [nzXl]="{ span: 6, offset: 2 }" [nzLg]="{ span: 8 }" [nzMd]="{ span: 12 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>生效日期</nz-form-label>
+          <nz-form-label>Ngày có hiệu lực</nz-form-label>
           <nz-form-control>
             <nz-range-picker formControlName="date_range" [style]="{ width: '100%' }"></nz-range-picker>
           </nz-form-control>
@@ -54,40 +56,42 @@
       </nz-col>
       <nz-col [nzXl]="{ span: 8, offset: 2 }" [nzLg]="{ span: 10 }" [nzMd]="{ span: 24 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>仓库类型</nz-form-label>
-          <nz-form-control nzErrorTip="请选择仓库类型">
-            <nz-select formControlName="type" [nzShowSearch]="true" [nzPlaceHolder]="'请选择仓库类型'">
-              <nz-option [nzLabel]="'私密'" [nzValue]="'private'"></nz-option>
-              <nz-option [nzLabel]="'公开'" [nzValue]="'public'"></nz-option>
+          <nz-form-label>Loại nhà kho</nz-form-label>
+          <nz-form-control nzErrorTip="xin vui lòng chọn Loại nhà kho">
+            <nz-select formControlName="type" [nzShowSearch]="true" [nzPlaceHolder]="'xin vui lòng chọn loại nhà kho'">
+              <nz-option [nzLabel]="'Riêng tư'" [nzValue]="'private'"></nz-option>
+              <nz-option [nzLabel]="'công cộng'" [nzValue]="'public'"></nz-option>
             </nz-select>
           </nz-form-control>
         </nz-form-item>
       </nz-col>
     </nz-row>
   </nz-card>
-  <nz-card [nzBordered]="false" nzTitle="任务管理">
+  <nz-card [nzBordered]="false" nzTitle="Quản lý công việc">
     <nz-row nzGutter="16">
       <nz-col nzLg="6" nzMd="12" nzSm="24">
         <nz-form-item>
-          <nz-form-label>任务名</nz-form-label>
-          <nz-form-control nzErrorTip="请输入任务名">
-            <input nz-input formControlName="name2" placeholder="请输入任务名" />
+          <nz-form-label> Tên nhiệm vụ</nz-form-label>
+          <nz-form-control nzErrorTip="vui lòng nhập  Tên nhiệm vụ">
+            <input nz-input formControlName="name2" placeholder="vui lòng nhập  Tên nhiệm vụ" />
           </nz-form-control>
         </nz-form-item>
       </nz-col>
       <nz-col [nzXl]="{ span: 6, offset: 2 }" [nzLg]="{ span: 8 }" [nzMd]="{ span: 12 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>任务描述</nz-form-label>
-          <nz-form-control nzErrorTip="请输入任务描述">
-            <textarea nz-input formControlName="summary" [nzAutosize]="true" placeholder="请输入任务描述"></textarea>
+          <nz-form-label>任务sự miêu tả</nz-form-label>
+          <nz-form-control nzErrorTip="vui lòng nhập  miêu tả công việc">
+            <textarea nz-input formControlName="summary" [nzAutosize]="true"
+              placeholder="vui lòng nhập  miêu tả công việc"></textarea>
           </nz-form-control>
         </nz-form-item>
       </nz-col>
       <nz-col [nzXl]="{ span: 8, offset: 2 }" [nzLg]="{ span: 10 }" [nzMd]="{ span: 24 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>执行人</nz-form-label>
-          <nz-form-control nzErrorTip="请选择执行人">
-            <nz-select formControlName="owner2" [nzPlaceHolder]="'请选择执行人'" [nzShowSearch]="true">
+          <nz-form-label>Người thừa hành</nz-form-label>
+          <nz-form-control nzErrorTip="xin vui lòng chọn Người thừa hành">
+            <nz-select formControlName="Owner2" [nzPlaceHolder]="'xin vui lòng chọn Người thừa hành'"
+              [nzShowSearch]="true">
               <nz-option *ngFor="let i of users" [nzLabel]="i.label" [nzValue]="i.value"> </nz-option>
             </nz-select>
           </nz-form-control>
@@ -97,9 +101,10 @@
     <nz-row nzGutter="16">
       <nz-col nzLg="6" nzMd="12" nzSm="24">
         <nz-form-item>
-          <nz-form-label>责任人</nz-form-label>
-          <nz-form-control nzErrorTip="请选择责任人">
-            <nz-select formControlName="approver2" [nzPlaceHolder]="'请选择责任人'" [nzShowSearch]="true">
+          <nz-form-label>người phê duyệt</nz-form-label>
+          <nz-form-control nzErrorTip="xin vui lòng chọn người phê duyệt">
+            <nz-select formControlName="approver2" [nzPlaceHolder]="'xin vui lòng chọn người phê duyệt'"
+              [nzShowSearch]="true">
               <nz-option *ngFor="let i of users" [nzLabel]="i.label" [nzValue]="i.value"></nz-option>
             </nz-select>
           </nz-form-control>
@@ -107,7 +112,7 @@
       </nz-col>
       <nz-col [nzXl]="{ span: 6, offset: 2 }" [nzLg]="{ span: 8 }" [nzMd]="{ span: 12 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>生效时间</nz-form-label>
+          <nz-form-label> Thời gian hiệu quả </nz-form-label>
           <nz-form-control>
             <nz-time-picker formControlName="time"></nz-time-picker>
           </nz-form-control>
@@ -115,25 +120,26 @@
       </nz-col>
       <nz-col [nzXl]="{ span: 8, offset: 2 }" [nzLg]="{ span: 10 }" [nzMd]="{ span: 24 }" nzSm="24">
         <nz-form-item>
-          <nz-form-label>任务类型</nz-form-label>
-          <nz-form-control nzErrorTip="请选择任务类型">
-            <nz-select formControlName="type2" [nzShowSearch]="true" [nzPlaceHolder]="'请选择任务类型'">
-              <nz-option [nzLabel]="'私密'" [nzValue]="'private'"></nz-option>
-              <nz-option [nzLabel]="'公开'" [nzValue]="'public'"></nz-option>
+          <nz-form-label> loại công việc</nz-form-label>
+          <nz-form-control nzErrorTip="xin vui lòng chọn loại công việc">
+            <nz-select formControlName="type2" [nzShowSearch]="true"
+              [nzPlaceHolder]="'xin vui lòng chọn loại công việc'">
+              <nz-option [nzLabel]="'Riêng tư'" [nzValue]="'riêng tư'"> </nz-option>
+              <nz-option [nzLabel]="'public'" [nzValue]="'public'"> </nz-option>
             </nz-select>
           </nz-form-control>
         </nz-form-item>
       </nz-col>
     </nz-row>
   </nz-card>
-  <nz-card [nzBordered]="false" nzTitle="成员管理">
+  <nz-card [nzBordered]="false" nzTitle="Quản lý thành viên">
     <nz-table formArrayName="items" [nzData]="items.value" [nzShowPagination]="false">
       <thead>
         <tr>
-          <th>成员姓名</th>
-          <th>工号</th>
-          <th>所属部门</th>
-          <th>操作</th>
+          <th> Tên thành viên </th>
+          <th> ID công việc </th>
+          <th> Bộ phận </th>
+          <th> Hoạt động </th>
         </tr>
       </thead>
       <tbody>
@@ -141,37 +147,37 @@
           <td>
             <span *ngIf="editIndex !== i">{{ items.value[i].name }}</span>
             <nz-form-item *ngIf="editIndex === i">
-              <nz-form-control nzErrorTip="请输入成员姓名">
-                <input nz-input formControlName="name" placeholder="请输入成员姓名" />
+              <nz-form-control nzErrorTip="vui lòng nhập tên thành viên">
+                <input nz-input formControlName="name" placeholder="vui lòng nhập tên thành viên" />
               </nz-form-control>
             </nz-form-item>
           </td>
           <td>
             <span *ngIf="editIndex !== i">{{ items.value[i].workId }}</span>
             <nz-form-item *ngIf="editIndex === i">
-              <nz-form-control nzErrorTip="请输入工号">
-                <input nz-input formControlName="workId" placeholder="请输入工号" />
+              <nz-form-control nzErrorTip="vui lòng nhập công việc">
+                <input nz-input formControlName="workId" placeholder="vui lòng nhập công việc" />
               </nz-form-control>
             </nz-form-item>
           </td>
           <td>
             <span *ngIf="editIndex !== i">{{ items.value[i].department }}</span>
             <nz-form-item *ngIf="editIndex === i">
-              <nz-form-control nzErrorTip="请输入所属部门">
-                <input nz-input formControlName="department" placeholder="请输入所属部门" />
+              <nz-form-control nzErrorTip="vui lòng nhậpPhòng ban">
+                <input nz-input formControlName="department" placeholder="vui lòng nhậpPhòng ban" />
               </nz-form-control>
             </nz-form-item>
           </td>
           <td>
             <span *ngIf="editIndex !== i">
-              <a (click)="edit(i)">编辑</a>
+              <a (click)="edit(i)">chỉnh sửa</a>
               <nz-divider nzType="vertical"></nz-divider>
-              <a nz-popconfirm nzPopconfirmTitle="是否要删除此行？" (nzOnConfirm)="del(i)">删除</a>
+              <a nz-popconfirm nzPopconfirmTitle="是否要xóa bỏ此行？" (nzOnConfirm)="del(i)">xóa bỏ</a>
             </span>
             <span *ngIf="editIndex === i">
-              <a (click)="save(i)">保存</a>
+              <a (click)="save(i)">Lưu</a>
               <nz-divider nzType="vertical"></nz-divider>
-              <a nz-popconfirm nzPopconfirmTitle="是否要取消操作？" (nzOnConfirm)="cancel(i)">取消</a>
+              <a nz-popconfirm nzPopconfirmTitle="是否要Hủy操作？" (nzOnConfirm)="cancel(i)">Hủy</a>
             </span>
           </td>
         </tr>
@@ -179,10 +185,10 @@
     </nz-table>
     <button *ngIf="editIndex === -1" nz-button [nzType]="'dashed'" (click)="add()" nzBlock class="mt-md">
       <i nz-icon nzType="plus"></i>
-      <span>新增成员</span>
+      <span> Thêm thành viên mới </span>
     </button>
   </nz-card>
   <footer-toolbar errorCollect>
-    <button nz-button type="primary" nzType="primary">提交</button>
+    <button nz-button type="primary" nzType="primary">Gửi đi</button>
   </footer-toolbar>
 </form>

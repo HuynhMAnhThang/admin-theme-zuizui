@@ -19,7 +19,7 @@ export class CanLeaveProvide implements CanDeactivate<GuardComponent> {
         nzTitle: '确认要离开吗？',
         nzContent: '你已经填写了部分表单离开会放弃已经填写的内容。',
         nzOkText: '离开',
-        nzCancelText: '取消',
+        nzCancelText: 'Hủy',
         nzOnOk: () => {
           observer.next(true);
           observer.complete();

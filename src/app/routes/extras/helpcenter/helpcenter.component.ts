@@ -15,7 +15,7 @@ export class HelpCenterComponent {
   }
 
   search(): void {
-    this.msg.success(`搜索：${this.q}`);
+    this.msg.success(`Tìm kiếm：${this.q}`);
   }
 
   constructor(public msg: NzMessageService) {}

@@ -1,23 +1,26 @@
 <page-header></page-header>
 <nz-card [nzBordered]="false">
-  <result type="error" [title]="'提交失败'" description="请核对并修改以下信息后，再重新提交。" [extra]="resultExtra">
+  <result type="error" [title]="'Gửi không thành công'"
+    description="Vui lòng kiểm tra và sửa đổi thông tin sau trước khi gửi lại." [extra]="resultExtra">
     <ng-template #resultExtra>
-      <div class="mb-md text-lg">您提交的内容有如下错误：</div>
+      <div class="mb-md text-lg">Nội dung bạn đã gửi có các lỗi sau đây:</div>
       <div class="mb-md">
-        <i nz-icon nzType="close-circle" class="text-error pr-sm"></i>您的账户已被冻结
+        <i nz-icon nzType="close-circle" class="text-error pr-sm"></i>
+        Tài khoản của bạn đã bị vô hiệu hóa!
         <a class="ml-md">
-          立即解冻
+          Mở ngay lập tức
           <i nz-icon nzType="right" class="pl-sm"></i>
         </a>
       </div>
       <div>
-        <i nz-icon nzType="close-circle" class="text-error pr-sm"></i>您的账户还不具备申请资格
+        <i nz-icon nzType="close-circle" class="text-error pr-sm"></i>
+        Tài khoản của bạn chưa đủ điều kiện để đăng ký!
         <a class="ml-md">
-          立即升级
+          Nâng cập ngay lập tức
           <i nz-icon nzType="right" class="pl-sm"></i>
         </a>
       </div>
     </ng-template>
-    <button nz-button [nzType]="'primary'">返回修改</button>
+    <button nz-button [nzType]="'primary'"><i nz-icon [nzType]="'left'"></i>Trở lại</button>
   </result>
 </nz-card>

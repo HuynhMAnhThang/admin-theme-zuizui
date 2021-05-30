@@ -34,8 +34,8 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
               <nz-avatar [nzSrc]="'./assets/tmp/img/2.png'"></nz-avatar>
             </div>
             <div nz-col [nzSpan]="20">
-              <strong>はなさき</strong>
-              <p class="mb0">ハルカソラトキヘダツヒカリ</p>
+              <strong>Chị Dậu</strong>
+              <p class="mb0">Tôi còn chồng nữa xin các anh đi ỉa chỗ khác!</p>
             </div>
           </div>
           <div nz-row [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm pr-md point bg-grey-lighter-h">
@@ -43,8 +43,8 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component } from '@angular/
               <nz-avatar [nzSrc]="'./assets/tmp/img/3.png'"></nz-avatar>
             </div>
             <div nz-col [nzSpan]="20">
-              <strong>苏先生</strong>
-              <p class="mb0">请告诉我，我应该说点什么好？</p>
+              <strong>Anh Tèo</strong>
+              <p class="mb0">Xin hãy cho tôi biết, tôi nên nói gì?</p>
             </div>
           </div>
           <div nz-row [nzJustify]="'center'" [nzAlign]="'middle'" class="py-sm pr-md point bg-grey-lighter-h">

@@ -21,7 +21,7 @@ export class ProBasicListComponent implements OnInit {
     subDescription: string;
     href: string;
     logo: string;
-    owner: string;
+    Owner: string;
     createdAt: Date;
     percent: number;
     status: string;
@@ -55,6 +55,6 @@ export class ProBasicListComponent implements OnInit {
   }
 
   remove(title: string): void {
-    this.msg.success(`删除：${title}`);
+    this.msg.success(`xóa bỏ：${title}`);
   }
 }

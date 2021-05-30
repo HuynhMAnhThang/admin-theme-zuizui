@@ -5,36 +5,36 @@ export class TransferService {
   step = 1;
 
   /**
-   * 付款账户
+   *tài khoản thanh toán
    */
   pay_account = '';
 
   /**
-   * 收款账户类型
+   *Nhận loại tài khoản
    */
   receiver_type: 'alipay' | 'bank' = 'alipay';
 
   get receiver_type_str(): string {
-    return this.receiver_type === 'alipay' ? '支付宝' : '银行';
+    return this.receiver_type === 'alipay' ? 'Alipay' : 'ngân hàng';
   }
 
   /**
-   * 收款账户
+   * Những tài khoản có thể nhận được
    */
   receiver_account = '';
 
   /**
-   * 收款姓名
+   * Tên nhận
    */
   receiver_name = '';
 
   /**
-   * 金额
+   * Số tiền
    */
   amount = 500;
 
   /**
-   * 支付密码
+  * Mật khẩu thanh toán
    */
   password = '123456';
 

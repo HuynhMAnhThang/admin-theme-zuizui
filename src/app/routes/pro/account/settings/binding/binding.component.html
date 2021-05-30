@@ -1,9 +1,9 @@
 <nz-list nzItemLayout="horizontal">
   <nz-list-item [nzActions]="[githubOp]">
     <ng-template #githubOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="绑定Github" [nzAvatar]="githubAvatar" nzDescription="当前未绑定Github账号">
+    <nz-list-item-meta nzTitle="Github" [nzAvatar]="githubAvatar" nzDescription="Github">
       <ng-template #githubAvatar>
         <i nz-icon nzType="github" class="icon-sm"></i>
       </ng-template>
@@ -11,9 +11,9 @@
   </nz-list-item>
   <nz-list-item [nzActions]="[taobaoOp]">
     <ng-template #taobaoOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="绑定Taobao" [nzAvatar]="taobaoAvatar" nzDescription="当前未绑定Taobao账号">
+    <nz-list-item-meta nzTitle="Taobao" [nzAvatar]="taobaoAvatar" nzDescription="Taobao">
       <ng-template #taobaoAvatar>
         <i nz-icon nzType="taobao" class="icon-sm"></i>
       </ng-template>
@@ -21,9 +21,9 @@
   </nz-list-item>
   <nz-list-item [nzActions]="[alipayOp]">
     <ng-template #alipayOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="绑定Alipay" [nzAvatar]="alipayAvatar" nzDescription="当前未绑定Alipay账号">
+    <nz-list-item-meta nzTitle="Alipay" [nzAvatar]="alipayAvatar" nzDescription="Alipay">
       <ng-template #alipayAvatar>
         <i nz-icon nzType="alipay-circle" class="icon-sm"></i>
       </ng-template>

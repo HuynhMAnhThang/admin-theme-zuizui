@@ -1,51 +1,46 @@
-<page-header [title]="'基础表单'">
-  将一个冗长或用户不熟悉的表单任务分成多个步骤，指导用户完成。
+<page-header [title]="'Hình thức cơ bản'">
+  Chia một nhiệm vụ biểu mẫu dài dòng hoặc không quen thuộc thành nhiều bước để hướng dẫn người dùng thực hiện.
 </page-header>
 <nz-card [nzBordered]="false">
   <form nz-form [formGroup]="form" (ngSubmit)="submit()" se-container="1" labelWidth="200">
-    <se label="标题" error="请输入标题" required>
-      <input nz-input formControlName="title" placeholder="给目标起个名字" />
+    <se label="tiêu đề" error="vui lòng nhập  tiêu đề" required>
+      <input nz-input formControlName="title" placeholder="name target" />
     </se>
-    <se label="起止日期" error="请输入标题" required>
+    <se label="Ngày bắt đầu và ngày kết thúc" error="vui lòng nhậptiêu đề" required>
       <nz-range-picker formControlName="date"></nz-range-picker>
     </se>
-    <se label="目标描述" error="请输入目标描述" required>
-      <textarea
-        nz-input
-        formControlName="goal"
-        [nzAutosize]="{ minRows: 4 }"
-        placeholder="请输入你的阶段性工作目标"
-      ></textarea>
+    <se label="mục đíchsự miêu tả" error="vui lòng nhập  mục đích   sự miêu tả" required>
+      <textarea nz-input formControlName="goal" [nzAutosize]="{ minRows: 4 }"
+        placeholder="vui lòng nhập mục tiêu theo từng giai đoạn của bạn"></textarea>
     </se>
-    <se label="衡量标准" error="请输入衡量标准" required>
-      <textarea
-        nz-input
-        formControlName="standard"
-        [nzAutosize]="{ minRows: 4 }"
-        placeholder="请输入衡量标准"
-      ></textarea>
+    <se label="Tiêu chuẩn Đo lường" error="vui lòng nhập Tiêu chuẩn đo lường" bắt buộc>
+      <textarea nz-input formControlName="standard" [nzAutosize]="{ minRows: 4 }"
+        placeholder="vui lòng nhập tiêu chuẩn đo lường"></textarea>
     </se>
-    <se label="客户" optionalHelp="目标的服务对象" error="请输入衡量标准">
-      <input nz-input formControlName="client" placeholder="请描述你服务的客户，内部客户直接 @姓名／工号" />
+    <se label="Customer" optionHelp="Đối tượng dịch vụ của mục tiêu" error="vui lòng nhập tiêu chuẩn đo lường">
+      <input nz-input formControlName="client"
+        placeholder="Vui lòng miêu tả khách hàng mà bạn phục vụ, khách hàng nội bộ trực tiếp @ Tên / Số cơ quan " />
     </se>
-    <se label="邀评人">
-      <input nz-input formControlName="invites" placeholder="请直接 @姓名／工号，最多可邀请 5 人" />
+    <se label="Mời người bình luận">
+      <input nz-input formControlName="Mời"
+        placeholder="Vui lòng trực tiếp @ Tên / Số công việc, bạn có thể mời tối đa 5 người" />
     </se>
-    <se label="权重">
-      <nz-input-number formControlName="weight" placeholder="请输入"></nz-input-number>
+    <se label="Trọng lượng">
+      <nz-input-number formControlName="weight" placeholder="vui lòng nhập"></nz-input-number>
       <em>%</em>
     </se>
-    <se label="目标公开" extra="客户、邀评人默认被分享">
+    <se label="target public" extra="Khách hàng, người bình luận được mời được chia sẻ theo mặc định">
       <nz-radio-group formControlName="public">
-        <label nz-radio [nzValue]="1">公开</label>
-        <label nz-radio [nzValue]="2">部分公开</label>
-        <label nz-radio [nzValue]="3">不公开</label>
+        <label nz-radio [nzValue]="1"> Công khai </label>
+        <label nz-radio [nzValue]="2"> Công khai một phần </label>
+        <label nz-radio [nzValue]="3"> Không công khai </label>
       </nz-radio-group>
-      <input *ngIf="form.value.public === 2" nz-input formControlName="publicUsers" placeholder="公开给" />
+      <input *ngIf="form.value.public === 2" nz-input formControlName="publicUsers" placeholder="Mở" />
     </se>
     <se>
-      <button nz-button nzType="primary" [disabled]="form.invalid" type="submit" [nzLoading]="submitting">提交</button>
-      <button nz-button class="ml-sm">保存</button>
+      <button nz-button nzType="primary" [disabled]="form.invalid" type="submit" [nzLoading]="submitting">Gửi
+        đi</button>
+      <button nz-button class="ml-sm">Lưu</button>
     </se>
   </form>
 </nz-card>

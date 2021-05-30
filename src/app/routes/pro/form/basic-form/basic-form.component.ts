@@ -31,7 +31,7 @@ export class BasicFormComponent implements OnInit {
     this.submitting = true;
     setTimeout(() => {
       this.submitting = false;
-      this.msg.success(`提交成功`);
+      this.msg.success(`gửi thành công`);
       this.cdr.detectChanges();
     }, 1000);
   }

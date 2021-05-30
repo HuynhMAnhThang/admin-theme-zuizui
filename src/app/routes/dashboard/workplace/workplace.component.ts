@@ -63,7 +63,7 @@ export class DashboardWorkplaceComponent implements OnInit {
     },
     {
       id: 'members-4',
-      title: '中二少女团',
+      title: '中二少Nữ团',
       logo: 'https://gw.alipayobjects.com/zos/rmsportal/sfjbOqnsXXJgNCjCzDBL.png',
       link: '',
     },

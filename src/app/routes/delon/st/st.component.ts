@@ -33,8 +33,8 @@ export class STDemoComponent implements OnInit {
       type: 'yn',
       yn: {
         truth: 'female',
-        yes: '男',
-        no: '女',
+        yes: 'Nam',
+        no: 'Nữ',
         mode: 'text',
       },
       width: 120,

@@ -1,16 +1,15 @@
 # ShareModule
+**Should** include definitions:
 
-**应** 包含定义：
++ application general custom business components
 
-+ 应用通用自定义业务组件
+**Should** export all included modules.
 
-**应** 导出所有包含的模块。
+**Should not have the `providers` attribute.
 
-**不应** 有 `providers` 属性。
+## Customize global components or directives
 
-## 自定义全局组件或指令
-
-每一个组件或指令应该有一个完整的说明文件，**建议**一个合理的目录结构应该是：
+Each component or instruction should have a complete description file, **recommendation** a reasonable directory structure should be:
 
 ```
 ├── components

@@ -6,7 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 // #region default language
-// 参考：https://ng-alain.com/docs/i18n
+// Reference: https://ng-alain.com/docs/i18n
 import { default as ngLang } from '@angular/common/locales/en';
 import { DELON_LOCALE, en_US as delonLang } from '@delon/theme';
 import { enUS as dateLang } from 'date-fns/locale';
@@ -35,7 +35,7 @@ import { ALAIN_I18N_TOKEN } from '@delon/theme';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-// 加载i18n语言文件
+// Load i18n language file
 export function I18nHttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http, `assets/tmp/i18n/`, '.json');
 }

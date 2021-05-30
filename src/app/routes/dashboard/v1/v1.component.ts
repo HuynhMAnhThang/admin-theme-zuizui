@@ -13,14 +13,14 @@ export class DashboardV1Component implements OnInit {
     {
       completed: true,
       avatar: '1',
-      name: '苏先生',
-      content: `请告诉我，我应该说点什么好？`,
+      name: 'Anh Tèo',
+      content: `Xin hãy cho tôi biết, tôi nên nói gì?`,
     },
     {
       completed: false,
       avatar: '2',
-      name: 'はなさき',
-      content: `ハルカソラトキヘダツヒカリ`,
+      name: 'Chị Dậu',
+      content: `Tôi còn chồng nữa xin các anh đi ỉa chỗ khác!`,
     },
     {
       completed: false,

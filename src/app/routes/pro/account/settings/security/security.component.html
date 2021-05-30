@@ -1,49 +1,49 @@
 <nz-list nzItemLayout="horizontal">
   <nz-list-item [nzActions]="[passwordOp]">
     <ng-template #passwordOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="账户密码" [nzDescription]="passwordDesc">
-      <ng-template #passwordDesc> 当前密码强度：<span class="text-green">强</span> </ng-template>
+    <nz-list-item-meta nzTitle="Mật khẩu tài khoản" [nzDescription]="passwordDesc">
+      <ng-template #passwordDesc> Độ mạnh mật khẩu hiện tại: <span class="text-green"> strong </span> </ng-template>
     </nz-list-item-meta>
   </nz-list-item>
   <nz-list-item [nzActions]="[phoneOp]">
     <ng-template #phoneOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="密保手机" [nzDescription]="phoneDesc">
+    <nz-list-item-meta nzTitle="Điện thoại Bảo mật Bí mật" [nzDescription]="phoneDesc">
       <ng-template #phoneDesc>
-        已绑定手机：159****2231
+        Điện thoại di động giới hạn: 159 **** 2231
       </ng-template>
     </nz-list-item-meta>
   </nz-list-item>
   <nz-list-item [nzActions]="[questionOp]">
     <ng-template #questionOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="密保问题" [nzDescription]="questionDesc">
+    <nz-list-item-meta nzTitle="Câu hỏi bảo mật bí mật" [nzDescription]="questionDesc">
       <ng-template #questionDesc>
-        未设置密保问题，密保问题可有效保护账户安全
+        Không có vấn đề bảo mật nào được đặt ra, vấn đề bảo mật có thể bảo vệ hiệu quả tính bảo mật của tài khoản
       </ng-template>
     </nz-list-item-meta>
   </nz-list-item>
   <nz-list-item [nzActions]="[emailOp]">
     <ng-template #emailOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="备用邮箱" [nzDescription]="emailDesc">
+    <nz-list-item-meta nzTitle="Email Thay thế" [nzDescription]="emailDesc">
       <ng-template #emailDesc>
-        已绑定邮箱：cip*****.com
+        Email liên kết: cip *****. Com
       </ng-template>
     </nz-list-item-meta>
   </nz-list-item>
   <nz-list-item [nzActions]="[mfaOp]">
     <ng-template #mfaOp>
-      <a (click)="msg.success('Edit')">修改</a>
+      <a (click)="msg.success('Edit')"> Chỉnh sửa </a>
     </ng-template>
-    <nz-list-item-meta nzTitle="MFA 设备" [nzDescription]="mfaDesc">
+    <nz-list-item-meta nzTitle="Thiết bị MFA" [nzDescription]="mfaDesc">
       <ng-template #mfaDesc>
-        未绑定 MFA 设备，绑定后，可以进行二次确认
+        Thiết bị MFA chưa được ràng buộc, sau khi ràng buộc, bạn có thể thực hiện xác nhận lần thứ hai
       </ng-template>
     </nz-list-item-meta>
   </nz-list-item>

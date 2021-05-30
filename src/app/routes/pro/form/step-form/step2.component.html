@@ -1,24 +1,19 @@
 <form nz-form [formGroup]="form" (ngSubmit)="_submitForm()">
   <div se-container="1" labelWidth="100">
-    <nz-alert
-      class="pb-lg"
-      [nzMessage]="'确认转账后，资金将直接打入对方账户，无法退回。'"
-      [nzShowIcon]="true"
-      [nzCloseable]="true"
-    ></nz-alert>
-    <se label="付款账户">{{ item.pay_account }}</se>
-    <se label="账户类型">{{ item.receiver_type === 'alipay' ? '支付宝' : '银行' }}</se>
-    <se label="收款账户">{{ item.receiver_account }}</se>
-    <se label="收款人姓名">{{ item.receiver_name }}</se>
-    <se label="转账金额"
-      ><strong class="text-lg">{{ item.amount }}</strong></se
-    >
-    <se label="支付密码" required error="至少6位数以上" class="border-top-1 pt-lg">
-      <input nz-input formControlName="password" type="password" />
-    </se>
-    <se>
-      <button nz-button [nzType]="'primary'" [nzLoading]="loading" [disabled]="form.invalid">提交</button>
-      <button nz-button (click)="prev()">上一步</button>
-    </se>
+    <nz-alert class="pb-lg"
+      [nzMessage]="'Sau khi xác nhận chuyển khoản, tiền sẽ được ghi có trực tiếp vào tài khoản của bên kia và không thể trả lại.'"
+      [nzShowIcon]="true" [nzCloseable]="true"> </nz-alert>
+    <se label="Tài khoản thanh toán"> {{item.pay_account}} </se>
+    <se label="account type"> {{item.receiver_type === 'alipay'? 'Alipay': 'Bank'}} </se>
+    <se label="tài khoản nhận"> {{item.receiver_account}} </se>
+    <se label="Tên người nhận thanh toán"> {{item.receiver_name}} </se>
+    <se label="Số tiền chuyển"> <strong class="text-lg"> {{item.amount}} </strong> </ se>
+      <se label="Mật khẩu thanh toán" bắt buộc phải có error="Ít nhất 6 chữ số trở lên" class="border-top-1 pt-lg">
+        <input nz-input formControlName="password" type="password" />
+      </se>
+      <se>
+        <button nz-button [nzType]="'primary'" [nzLoading]="loading" [disabled]="form.invalid"> Gửi </button>
+        <button nz-button (click)="prev ()"> Bước trước </button>
+      </se>
   </div>
 </form>

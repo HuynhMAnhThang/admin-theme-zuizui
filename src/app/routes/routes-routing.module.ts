@@ -26,7 +26,7 @@ const routes: Routes = [
       { path: 'pro', loadChildren: () => import('./pro/pro.module').then((m) => m.ProModule) },
     ],
   },
-  // Blak Layout 空白布局
+  // Blak Layout Blank layout
   // passport
   { path: '', loadChildren: () => import('./passport/passport.module').then((m) => m.PassportModule) },
   { path: 'exception', loadChildren: () => import('./exception/exception.module').then((m) => m.ExceptionModule) },

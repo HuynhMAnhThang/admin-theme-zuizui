@@ -106,10 +106,10 @@ export class DefaultInterceptor implements HttpInterceptor {
 
     return this.refreshTokenRequest().pipe(
       switchMap((res) => {
-        // 通知后续请求继续执行
+        // Thông báo后续请求继续执行
         this.refreshToking = false;
         this.refreshToken$.next(res);
-        // 重新保存新 token
+        // 重新Lưu新 token
         this.tokenSrv.set(res);
         // 重新发起请求
         return next.handle(this.reAttachToken(req));

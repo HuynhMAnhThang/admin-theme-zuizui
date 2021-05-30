@@ -11,8 +11,8 @@ export class AdvancedFormComponent implements OnInit {
   editObj = {};
   form!: FormGroup;
   users: Array<{ value: string; label: string }> = [
-    { value: 'xiao', label: '付晓晓' },
-    { value: 'mao', label: '周毛毛' },
+    { value: 'xiao', label: 'Fu Xiaoxiao' },
+    { value: 'mao', label: 'Zhou Maomao' },
   ];
 
   constructor(private fb: FormBuilder) {}
@@ -21,13 +21,13 @@ export class AdvancedFormComponent implements OnInit {
     this.form = this.fb.group({
       name: [null, [Validators.required]],
       url: [null, [Validators.required]],
-      owner: [undefined, [Validators.required]],
+      Owner: [undefined, [Validators.required]],
       approver: [null, [Validators.required]],
       date_range: [null, [Validators.required]],
       type: [null, [Validators.required]],
       name2: [null, [Validators.required]],
       summary: [null, [Validators.required]],
-      owner2: [null, [Validators.required]],
+      Owner2: [null, [Validators.required]],
       approver2: [null, [Validators.required]],
       time: [null, [Validators.required]],
       type2: [null, [Validators.required]],
@@ -76,8 +76,8 @@ export class AdvancedFormComponent implements OnInit {
   get url(): AbstractControl {
     return this.form.controls.url;
   }
-  get owner(): AbstractControl {
-    return this.form.controls.owner;
+  get Owner(): AbstractControl {
+    return this.form.controls.Owner;
   }
   get approver(): AbstractControl {
     return this.form.controls.approver;
@@ -97,8 +97,8 @@ export class AdvancedFormComponent implements OnInit {
   get summary(): AbstractControl {
     return this.form.controls.summary;
   }
-  get owner2(): AbstractControl {
-    return this.form.controls.owner2;
+  get Owner2(): AbstractControl {
+    return this.form.controls.Owner2;
   }
   get approver2(): AbstractControl {
     return this.form.controls.approver2;
